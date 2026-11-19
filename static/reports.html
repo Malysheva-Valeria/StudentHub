@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Звіти · StudentHub</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="page" class="hidden">
+<div class="page-head">
+    <div><h1>Звіти</h1><p>Успішність і відвідуваність за період</p></div>
+    <div class="actions">
+        <button class="btn" id="btnPrint">Друк</button>
+        <button class="btn btn-primary" id="btnCsv">Завантажити CSV</button>
+    </div>
+</div>
+<div class="card">
+    <div class="tabs" role="tablist">
+        <button class="active" data-tab="performance" role="tab">Успішність</button>
+        <button data-tab="attendance" role="tab">Відвідуваність</button>
+        <button data-tab="groups" role="tab">Порівняння груп</button>
+    </div>
+    <div class="filters">
+        <div class="f" id="wrapGroup"><label for="rGroup">Група</label><select id="rGroup"></select></div>
+        <div class="f grow"><label for="rSubject">Дисципліна</label><select id="rSubject"></select></div>
+        <div class="f"><label for="rFrom">Період з</label><input id="rFrom" type="date"></div>
+        <div class="f"><label for="rTo">по</label><input id="rTo" type="date"></div>
+        <div class="f"><label for="rPreset">Швидкий вибір</label><select id="rPreset">
+            <option value="">Увесь час</option><option value="custom" hidden>Довільний період</option><option value="month">Поточний місяць</option><option value="semester">Поточний семестр</option><option value="year">Навчальний рік</option></select></div>
+    </div>
+    <div class="stats-row" id="reportStats"></div>
+    <div class="card-body hidden" id="chartWrap"><div class="chart-box sm"><canvas id="reportChart"></canvas></div></div>
+    <div class="table-wrap" id="reportTable"></div>
+</div>
+</div>
+<script src="/vendor/chart.umd.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/pages/reports.js"></script>
+</body>
+</html>

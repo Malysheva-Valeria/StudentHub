@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Студенти · StudentHub</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="page" class="hidden">
+<div class="page-head">
+    <div><h1>Студенти</h1><p>Контингент студентів, пошук і фільтрація</p></div>
+    <div class="actions">
+        <button class="btn admin-only" id="btnExport">Експорт CSV</button>
+        <button class="btn btn-primary admin-only" id="btnAdd">Додати студента</button>
+    </div>
+</div>
+<div class="card">
+    <div class="filters">
+        <div class="f grow"><label for="fSearch">Пошук</label><input id="fSearch" type="search" placeholder="ПІБ, залікова книжка, email"></div>
+        <div class="f"><label for="fGroup">Група</label><select id="fGroup"></select></div>
+        <div class="f"><label for="fStatus">Статус</label><select id="fStatus">
+            <option value="">Усі статуси</option><option value="active">Навчається</option><option value="academic_leave">Академвідпустка</option>
+            <option value="expelled">Відрахований</option><option value="graduated">Випускник</option></select></div>
+        <div class="f"><label for="fGender">Стать</label><select id="fGender"><option value="">Усі</option><option value="M">Чоловіча</option><option value="F">Жіноча</option></select></div>
+    </div>
+    <div class="table-wrap"><table class="table" id="studentsTable">
+        <thead><tr>
+            <th class="sortable" data-sort="name">ПІБ</th><th>Залікова</th><th class="sortable" data-sort="group">Група</th>
+            <th>Статус</th><th class="sortable num" data-sort="avg">Сер. бал</th><th class="sortable" data-sort="attendance">Відвідуваність</th><th></th>
+        </tr></thead>
+        <tbody></tbody>
+    </table></div>
+    <div class="pagination" id="pager"></div>
+</div>
+</div>
+<script src="/js/app.js"></script>
+<script src="/js/pages/students.js"></script>
+</body>
+</html>

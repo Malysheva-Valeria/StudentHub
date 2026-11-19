@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Головна · StudentHub</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="page" class="hidden">
+<div class="page-head">
+    <div><h1>Огляд</h1><p>Моніторинг навчального процесу в одному місці</p></div>
+    <div class="actions"><button class="btn" data-print>Друк</button></div>
+</div>
+<div class="grid kpi-grid" id="kpis"><div class="loader"><span class="spinner"></span></div></div>
+<div class="grid grid-2 mt">
+    <div class="card">
+        <div class="card-head"><h2>Динаміка відвідуваності</h2><span class="muted small">за останні 6 навчальних місяців</span></div>
+        <div class="card-body"><div class="chart-box"><canvas id="trendChart" aria-label="Динаміка відвідуваності"></canvas></div></div>
+    </div>
+    <div class="card">
+        <div class="card-head"><h2>Розподіл за статтю</h2><span class="muted small">активні студенти</span></div>
+        <div class="card-body"><div class="chart-box"><canvas id="genderChart" aria-label="Розподіл за статтю"></canvas></div></div>
+    </div>
+</div>
+<div class="grid grid-3 mt">
+    <div class="card">
+        <div class="card-head"><h2>Розподіл за шкалою ECTS</h2></div>
+        <div class="card-body"><div class="chart-box sm"><canvas id="ectsChart"></canvas></div></div>
+    </div>
+    <div class="card">
+        <div class="card-head"><h2>Середній бал груп</h2></div>
+        <div class="card-body"><div class="chart-box sm"><canvas id="groupsChart"></canvas></div></div>
+    </div>
+    <div class="card">
+        <div class="card-head"><h2>Динаміка середнього балу</h2></div>
+        <div class="card-body"><div class="chart-box sm"><canvas id="gradeTrendChart"></canvas></div></div>
+    </div>
+</div>
+<div class="grid grid-3 mt">
+    <div class="card"><div class="card-head"><h2>Найкращі студенти</h2></div><div class="card-body"><ul class="list" id="topList"></ul></div></div>
+    <div class="card"><div class="card-head"><h2>Низька відвідуваність</h2><a href="/reports?tab=attendance" class="small">Усі →</a></div><div class="card-body"><ul class="list" id="riskList"></ul></div></div>
+    <div class="card"><div class="card-head"><h2>Останні оцінки</h2><a href="/grades" class="small">Усі →</a></div><div class="card-body"><ul class="list" id="recentList"></ul></div></div>
+</div>
+</div>
+<script src="/vendor/chart.umd.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/pages/dashboard.js"></script>
+</body>
+</html>

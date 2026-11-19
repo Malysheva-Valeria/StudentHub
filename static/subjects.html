@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Дисципліни · StudentHub</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="page" class="hidden">
+<div class="page-head">
+    <div><h1>Навчальні дисципліни</h1><p>Кредити ECTS, форма контролю, викладачі</p></div>
+    <div class="actions"><button class="btn btn-primary admin-only" id="btnAdd">Додати дисципліну</button></div>
+</div>
+<div class="card">
+    <div class="filters"><div class="f grow"><label for="fSearch">Пошук</label><input id="fSearch" type="search" placeholder="Назва або код дисципліни"></div></div>
+    <div class="table-wrap"><table class="table">
+    <thead><tr><th>Дисципліна</th><th>Код</th><th class="num">Кредити</th><th class="num">Годин</th><th class="center">Семестр</th><th>Контроль</th><th>Викладач</th><th class="num">Груп</th><th class="num">Сер. бал</th><th></th></tr></thead>
+    <tbody id="rows"></tbody>
+</table></div></div>
+</div>
+<script src="/js/app.js"></script>
+<script src="/js/pages/subjects.js"></script>
+</body>
+</html>

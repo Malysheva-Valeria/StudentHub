@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Групи · StudentHub</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="page" class="hidden">
+<div class="page-head">
+    <div><h1>Академічні групи</h1><p>Групи, куратори та закріплені дисципліни</p></div>
+    <div class="actions"><button class="btn btn-primary admin-only" id="btnAdd">Додати групу</button></div>
+</div>
+<div class="card"><div class="table-wrap"><table class="table">
+    <thead><tr><th>Назва</th><th class="center">Курс</th><th>Спеціальність</th><th>Куратор</th><th class="num">Студентів</th><th class="num">Сер. бал</th><th></th></tr></thead>
+    <tbody id="rows"></tbody>
+</table></div></div>
+</div>
+<script src="/js/app.js"></script>
+<script src="/js/pages/groups.js"></script>
+</body>
+</html>

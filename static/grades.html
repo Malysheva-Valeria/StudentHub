@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Оцінки · StudentHub</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="page" class="hidden">
+<div class="page-head">
+    <div><h1>Оцінки</h1><p>Електронний журнал та історія оцінювання</p></div>
+    <div class="actions"><button class="btn btn-primary" id="btnAdd">Виставити оцінку</button></div>
+</div>
+<div class="card">
+    <div class="tabs" role="tablist">
+        <button class="active" data-tab="journal" role="tab">Журнал групи</button>
+        <button data-tab="list" role="tab">Усі оцінки</button>
+    </div>
+    <section data-panel="journal">
+        <div class="filters">
+            <div class="f"><label for="jGroup">Група</label><select id="jGroup"></select></div>
+            <div class="f grow"><label for="jSubject">Дисципліна</label><select id="jSubject"></select></div>
+            <div class="f"><button class="btn" id="btnLesson">Нове заняття</button></div>
+        </div>
+        <div id="journal"><div class="table-empty">Оберіть групу та дисципліну</div></div>
+    </section>
+    <section data-panel="list" class="hidden">
+        <div class="filters">
+            <div class="f grow"><label for="lSearch">Студент</label><input id="lSearch" type="search" placeholder="Прізвище або імʼя"></div>
+            <div class="f"><label for="lGroup">Група</label><select id="lGroup"></select></div>
+            <div class="f"><label for="lSubject">Дисципліна</label><select id="lSubject"></select></div>
+            <div class="f"><label for="lType">Тип</label><select id="lType"><option value="">Усі</option><option value="current">Поточна</option><option value="module">Модульна</option><option value="exam">Екзамен</option><option value="credit">Залік</option></select></div>
+            <div class="f"><label for="lFrom">З</label><input id="lFrom" type="date"></div>
+            <div class="f"><label for="lTo">По</label><input id="lTo" type="date"></div>
+        </div>
+        <div class="stats-row" id="listStats"></div>
+        <div class="table-wrap"><table class="table">
+            <thead><tr><th>Дата</th><th>Студент</th><th>Група</th><th>Дисципліна</th><th>Тип</th><th class="center">Бал</th><th class="center">ECTS</th><th>Викладач</th><th></th></tr></thead>
+            <tbody id="listRows"></tbody>
+        </table></div>
+        <div class="pagination" id="pager"></div>
+    </section>
+</div>
+</div>
+<script src="/js/app.js"></script>
+<script src="/js/pages/grades.js"></script>
+</body>
+</html>

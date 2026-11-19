@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Користувачі · StudentHub</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="page" class="hidden">
+<div class="page-head">
+    <div><h1>Користувачі</h1><p>Облікові записи адміністраторів і викладачів</p></div>
+    <div class="actions"><button class="btn btn-primary" id="btnAdd">Додати користувача</button></div>
+</div>
+<div class="card"><div class="table-wrap"><table class="table">
+    <thead><tr><th>ПІБ</th><th>Логін</th><th>Роль</th><th>Статус</th><th>Створено</th><th></th></tr></thead>
+    <tbody id="rows"></tbody>
+</table></div></div>
+</div>
+<script src="/js/app.js"></script>
+<script src="/js/pages/users.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вхід · StudentHub</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="login-page">
+    <section class="login-hero">
+        <div class="brand" style="color:#fff;padding:0">
+            <div class="brand-logo" style="background:rgba(255,255,255,.18)">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>StudentHub
+        </div>
+        <div>
+            <h2>Облік успішності та відвідуваності студентів в одному місці</h2>
+            <p>Електронний журнал, відомості відвідуваності, аналітика та звіти для адміністрації й викладачів.</p>
+        </div>
+        <div class="hero-stats">
+            <div><b>100</b>бальна шкала + ECTS</div>
+            <div><b>CSV</b>експорт звітів</div>
+            <div><b>2</b>ролі доступу</div>
+        </div>
+    </section>
+    <section class="login-form-wrap">
+        <form class="login-card" id="loginForm" novalidate>
+            <h1>Вхід до системи</h1>
+            <p class="muted" style="margin:0 0 22px">Введіть свої облікові дані</p>
+            <div class="alert hidden" id="loginError" role="alert"></div>
+            <div class="field">
+                <label for="username">Логін</label>
+                <input id="username" name="username" autocomplete="username" required autofocus>
+            </div>
+            <div class="field">
+                <label for="password">Пароль</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit" id="loginBtn">Увійти</button>
+            <div class="demo-accounts hidden" id="demoAccounts">
+                Демо-доступ:<br>
+                <button type="button" data-u="admin" data-p="admin123">admin / admin123</button> — адміністратор<br>
+                <button type="button" data-u="teacher" data-p="teacher123">teacher / teacher123</button> — викладач
+            </div>
+        </form>
+    </section>
+</div>
+<script src="/js/login.js"></script>
+</body>
+</html>
