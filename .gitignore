@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+database/*.db
+database/*.db-*
+database/.session_secret
+e2e/screenshots/
+database/*.env
+database/*.txt
+database/logs/
+.vscode/
+.DS_Store

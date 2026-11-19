@@ -1,0 +1,9 @@
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+extend-exclude = ["static", "database"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+# B008: Depends()/Query() defaults are standard FastAPI
+ignore = ["B008"]
